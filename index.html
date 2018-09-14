@@ -1,26 +1,48 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>My First CRUD App</title>
-    <link rel="stylesheet" href="app.css">
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">  
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA23cQ3YJ1qPHOhdssLz7qRzc0io2SGX_8",
+    authDomain: "my-crud-app-ed8fc.firebaseapp.com",
+    databaseURL: "https://my-crud-app-ed8fc.firebaseio.com",
+    projectId: "my-crud-app-ed8fc",
+    storageBucket: "my-crud-app-ed8fc.appspot.com",
+    messagingSenderId: "57786731715"
+  };
+  firebase.initializeApp(config);
+</script>
 
-  </head>
-  <body>
+<script src="app.js"></script>
+<script src="moments.js"></script>
+</head>
 
-  <input type="text" class="user-input-title" placeholder="Enter the Title">
-  <div>
-  <textarea class="user-input-body" placeholder="Enter the body of text"></textarea>
-  </div>
-  <button class="add-text-btn">add text</button>
-  <button class="del-text-btn">delete text</button>
-  <button class="edit-text-btn">edit text</button>
+<body>
 
-  <div class="display"></div>
+<div class="header">
+  <h2>My awesome CRUD app!</h2>
+  <h5>A light-weight blogging application</h5>
+</div>
+
+<input id="text-title" placeholder="Title">
+
+<div>    
+<textarea id="text-body" placeholder="Body" maxlength="1000"></textarea>
+<div>    
+
+<section>
+  <button id="submit-form" onclick="onSubmit()">submit</button>
+</section>
+
+<div id='placeholder'></div>
+
+</div>
+
+<section class="footer">
+<h4>Designed by Gee Li</h4> 
+</section>
   </body>
 </html>
