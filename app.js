@@ -40,6 +40,8 @@ function writeData() {
     title: document.getElementById('text-title').value,
     body: document.getElementById('text-body').value
   });
+    document.getElementById('text-title').value = '';
+    document.getElementById('text-body').value = '';
 };
 
 function onSubmit() {
@@ -56,6 +58,8 @@ function updateData(postId, post) {
     title: document.getElementById('text-title').value,
     body: document.getElementById('text-body').value
   });
+    document.getElementById('text-title').value = '';
+    document.getElementById('text-body').value = '';
 }
 
 //readUserData
